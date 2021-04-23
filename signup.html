@@ -2,48 +2,48 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<link rel="stylesheet" href="font.css">
-	<link rel="stylesheet" href="signupstyle.css">
+	<link rel="stylesheet" href="Buttons.css">
     <meta charset="utf-8" />
     <title>Dog Days</title>
-<body> 
+</head>
+<body class=border> 
     <nav>
-    <button>
-        <a href ="index.html">Home</a>
-    </button>
+        <button onclick="location.href='index.html'" type="button">
+            Home</button>
     </nav>
 <form action="main.html" method="post">
-    <div class = "signup">
+<div>
     <h1>Dog Days</h1>
 	<p>
 	<img src="Dog Days Logo.PNG" alt="Woof" width="406" height="301">
 	</p>
-    <p>Fill in the boxes to create you Dog Days Account.</p>
+    <p>Fill in the boxes to create your Dog Days Account.</p>
         <p>
-		<label>First Name:</label>
+		<label>First Name: </label>
             <input type = "text" name = "firstName"placeholder = "Enter first name" required>
     </p>
 		<p>
-        <label>Last Name:</label>
-            <input type = "text" name = "lastName" placeholder = "Enter surname" required>
+        <label>Last Name: </label>
+            <input type = "text" name = "lastName" placeholder = "Enter last name" required>
     </p>
 		<p>
-        <label> Date of Birth:</label>
+        <label> Date of Birth: </label>
             <input type = "date" name = "birthday" placeholder = "Enter birthday" required>
    </p>
 		<p>
-        <label>Email Address</label>
+        <label>Email Address: </label>
             <input type = "email" name = "emailAddress" placeholder = "Enter an email address" required>
     </p>
 		<p>
-        <label for="password">Password </label> <!--Password input-->
-            <input type="password" placeholder="Enter Password" name="psw" required>
+        <label for="password">Password: </label> <!--Password input-->
+            <input type = "password" placeholder = "Enter Password" name ="psw" required>
     </p>
 		<p>
-        <label for="passwordRepeat">Repeat Password</label> <!--Repeat Password-->
+        <label for="passwordRepeat">Repeat Password: </label> <!--Repeat Password-->
             <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
     </p>
     <p><form action="/action_page.php">  <!--Image Upload-->
-        <label for="img">Select Dog Image:</label>
+        <label for="img">Select Dog Image: </label>
         <input type="file" id="img" name="img" accept="image/*">
       </form>
     </p>
@@ -52,14 +52,12 @@
 	</p>
     </div> 
 </form>
-<p>Already have an account with us?</p>
     <nav>
-    <p>
-	<button>
-        <a href ="login.html">Login</a>
-    </button>
+    <p>Already have an account?
+        <button onclick="location.href='login.html'" type="button">
+            Login</button>
 	</p>
 
-    </nav>
+</nav>
 </body>
 </html>
