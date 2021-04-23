@@ -7,16 +7,27 @@
     projectId: "dog-days-51554",
     storageBucket: "dog-days-51554.appspot.com",
   };
+firebase.initializeApp(config);
+var firestore = firebase.firestore();
 
-//Get Elements 
-  firebase.initializeApp(config);
+const documentRef = firestore.doc();
+const firstName = document.querySelector("#firstName");
+const lastName = document.querySelector("#lastName");
+const DoB = document.querySelector("#birthday");
+const emailAddress = document.querySelector("#emailAddress");
+const password = document.querySelector("#psw");
+const saveButton = document.querySelector("#Welcome to Dog Days");
 
-//References 
-  const preObject = document.getElementById('object');
-
-//Data Synchronization 
-  dBRefObject.on('value', snap => {
-      preObject.innerText = JSON. stringify(snap.val(), null, 3);
+loginButton.addEventListener("click", function(){
+  const saveInfo = inputTextField.value; 
+  console.log(saveInfo);
+  documentRef.set({
+    userStatus: saveInfo
+  }).then(function(){
+    console.log("Welcome to Dog Days!");
+  }).catch(function (error){
+    console.log("Error:", error );
   });
+})
 
-}());
+})();
