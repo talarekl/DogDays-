@@ -5,24 +5,28 @@
 	<link rel="stylesheet" href="Buttons.css">
     <meta charset="utf-8" />
     <title>Dog Days</title>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
 </head>
 <body class=border>
     <nav>
         <button onclick="location.href='index.html'" type="button">
             Home</button>
     </nav>
+    <pre id = "object">
+    </pre>
+    <script src = "database.js"></script>
 <form action="main.html" method="post">
-<div>
+<div class = "login">
     <h1>Dog Days</h1>
 	<p>
 <img src="Dog Days Logo.PNG" alt="Woof" width="406" height="301">
 </p>
     <p>
-	<label>Email Address: </label>
+	<label>Email Address</label>
         <input type = "email" name = "emailAddress" placeholder = "Enter an email address" required>
     </p>
 	<p>
-    <label for="password">Password: </label>
+    <label for="password">Password </label>
         <input type="password" placeholder="Enter Password" name="psw" required>
     </p>
 	<p>
@@ -31,10 +35,12 @@
 </div>
 </form>
 <nav>
-   <p>Don't have an account?
+   <p>Don't have an account? Create one here.</p>
+    <p>
         <button onclick="location.href='signup.html'" type="button">
             Create Account</button>
 	</p>
 </nav>
 </body>
+</script>
 </html>
