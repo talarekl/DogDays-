@@ -2,25 +2,23 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<link rel="stylesheet" href="font.css">
-	<link rel="stylesheet" href="loginstyle.css">
+	<link rel="stylesheet" href="Buttons.css">
     <meta charset="utf-8" />
     <title>Dog Days</title>
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
 </head>
-<body>
+<body class=border>
+    <nav>
+        <button onclick="location.href='index.html'" type="button">
+            Home</button>
+    </nav>
     <pre id = "object">
-
     </pre>
     <script src = "database.js"></script>
-    <nav>
-        <button>
-            <a href ="index.html">Home</a>
-        </button>
-    </nav>
 <form action="main.html" method="post">
 <div class = "login">
     <h1>Dog Days</h1>
-	<p>
+<p>
 <img src="Dog Days Logo.PNG" alt="Woof" width="406" height="301">
 </p>
     <p>
@@ -39,9 +37,8 @@
 <nav>
    <p>Don't have an account? Create one here.</p>
     <p>
-	<button>
-        <a href="signup.html">Create Account</a>
-    </button>
+        <button onclick="location.href='signup.html'" type="button">
+            Create Account</button>
 	</p>
 </nav>
 </body>
