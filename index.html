@@ -1,30 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="Buttons.css">
+<link rel="stylesheet" href="font.css">
+<link rel="stylesheet" href="indexstyle.css">
     <meta charset="utf-8" />
     <title>Dog Days</title>
 </head>
-<body class=border>
-    <div>
+<body>
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAT1a_otRiLhU06LV43GM4IzqVrHm_eREY",
+    authDomain: "cs-312-final-dog-days.firebaseapp.com",
+    projectId: "cs-312-final-dog-days",
+    storageBucket: "cs-312-final-dog-days.appspot.com",
+    messagingSenderId: "253993037694",
+    appId: "1:253993037694:web:98b007df2f922acd598d2f",
+    measurementId: "G-FQW3CBLDEG"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="app.js" defer></script>
 <h1>Dog Days</h1>
 <p>Live in the Dog Days Today!</p>
 <p>
-<img src="Dog Days Logo.PNG" width="406" height="301">
+<img src="Dog Days Logo.PNG" alt="Woof" width="406" height="301">
 </p>
 <nav>
-    <p>Click here to join Dog Days now!
-    
-        <button onclick="location.href='signup.html'" type="button">
-            Create Account</button>
+    <p>Click here to join Dog Days now! </p>
+    <p>
+	<button>
+        <a href="signup.html">Create Account</a>
+    </button>
 	</p>
     <br> 
-    <p>Already have an account?
-    
-        <button onclick="location.href='login.html'" type="button">
-            Login</button>
+    <p>Already have an account? Sign in Here:</p>
+    <p>
+	<button>
+        <a href= "login.html">Login</a>
+    </button>
 	</p>
-</div>
+<p>
+<img src="IMG_0246.PNG" alt="Bark" width="637" height="324">
+</p>
 </body>
 </html>
