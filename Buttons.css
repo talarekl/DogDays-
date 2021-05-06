@@ -2,6 +2,8 @@ p { text-align: center }
 h1 { text-align: center;
   font-size: 45px;
 }
+body { background-color: rgba(132, 157, 241, 0.849);;
+}
 
 h2 { text-align: left;
   font-size: 45px;
@@ -40,7 +42,7 @@ h1 {
   }
 .border{
     overflow: hidden;
-    background-color: rgba(255, 250, 250, 0.849);
+    background-color: rgb(255, 250, 250);
     width: 650px;
     border-radius: 25px;
     border: 15px solid #B00B69;
