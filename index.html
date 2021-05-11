@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <title>Dog Days</title>
 </head>
-<body >
+<body class=border>
      <!-- The core Firebase JS SDK is always required and must be listed first -->
      <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
      <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
@@ -20,38 +20,95 @@
        // Your web app's Firebase configuration
        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
        var firebaseConfig = {
-         apiKey: "AIzaSyAT1a_otRiLhU06LV43GM4IzqVrHm_eREY",
-         authDomain: "cs-312-final-dog-days.firebaseapp.com",
-         projectId: "cs-312-final-dog-days",
-         storageBucket: "cs-312-final-dog-days.appspot.com",
-         messagingSenderId: "253993037694",
-         appId: "1:253993037694:web:98b007df2f922acd598d2f",
-         measurementId: "G-FQW3CBLDEG"
+        apiKey: "AIzaSyAzjL9l25mAmgOqy1PuNhNkQAhFGEGkUEA",
+      authDomain: "dog-days-51554.firebaseapp.com",
+      databaseURL: "https://dog-days-51554-default-rtdb.firebaseio.com",
+      projectId: "dog-days-51554",
+      storageBucket: "dog-days-51554.appspot.com",
+      messagingSenderId: "223722049182",
+      appId: "1:223722049182:web:3b421b741498663a88758f",
+      measurementId: "G-QYD9PCSK45"
        };
        // Initialize Firebase
        firebase.initializeApp(firebaseConfig);
        firebase.analytics();
+
+       //references to authenticate and firestore
+       const auth = firebase.auth();
+       const database = firebase.firestore();
      </script>
      <script src="app.js" defer></script>
-<div class=border>
+<div>
 <h1>Dog Days</h1>
-<p >Live in the Dog Days Today!</p>
+<p>Live in the Dog Days Today!</p>
 <p>
-<img src="Dog Days Logo.png" width="406" height="301">
+<img src="Dog Days Logo.PNG" width="406" height="301">
 </p>
-<nav>
-    <p>Click here to join Dog Days now!
-    
-        <button onclick="location.href='signup.html'" type="button">
-            Create Account</button>
-	</p>
-    <br> 
-    <p>Already have an account?
-    
-        <button onclick="location.href='login.html'" type="button">
-            Login</button>
-	</p>
 </div>
+<!--Signup-->
+<button onclick="document.getElementById('modal-signup').style.display='block'" style="width:auto;">Create Account</button>
+<div id="modal-signup" class="modal">
+ <div class="modal-content">
+    <h4>Sign up</h4><br />
+    <span onclick="document.getElementById('modal-signup').style.display='none'" class="close" title="Close Modal"></span>
+    <form id="Signup-form">
+      <div class="input">
+        <label for="signup-fname">First Name:</label>
+        <input type="text" id="signup-fname" required/>
+      </div>
+      <div class="input">
+        <label for="signup-surname">Last Name:</label>
+        <input type="text" id="signup-surname" required />
+      </div>
+      <div class="input">
+        <label for="signup-email">Email address:</label>
+        <input type="email" id="signup-email" required />
+      </div>
+      <div class="input">
+        <label for="signup-password">Enter password:</label>
+        <input type="password" id="signup-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+        required/>
+        <script src= "Password-valid.js">
+        </script>
+      </div>
+      <div class="input">
+        <label for="signup-DOB">Enter Date of Birth:</label>
+        <input type="date" id="signup-DOB" required />
+      </div>
+      <div class="input">
+        <label for="signup-image">Select Image:</label>  
+        <input type="file" id="signup-image" accept="image/*" required />
+      </div>
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('modal-signup').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+    </form>
+ </div>
+</div>
+<!--Login-->
+<div id="modal-login" class="modal">
+    <button onclick="document.getElementById('modal-login').style.display='block'" style="width:auto;">Login</button>
+    <div class="modal-content">
+      <h4>Login</h4><br />
+      <form id="Login-form">
+        <div class="input">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email address</label>
+        </div>
+        <div class="input">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Your password</label>
+        </div>
+        <div class="clearfix">
+            <button type="button" onclick="document.getElementById('modal-login').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="submit" class="loginbtn">Login</button>
+        </div>
+      </form>
+    </div>
+</div>
+<script src="auth.js"></script>
+<script src ="index.js"></script>
 </body>
 </html>
 
