@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <title>Dog Days</title>
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
 </head>
 <body >
     <div class=border>
@@ -31,7 +32,7 @@
         <input type="password" placeholder="Enter Password" name="psw" required>
     </p>
 	<p>
-    <input type="submit" value="Login">
+    <button onclick = "login()" id = "Login" >Login</button>
 	</p>
 </div>
 </form>
