@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="Buttons.css">
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+    <title>Dog Days</title>
+</head>
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 15px;
+  border: 1px solid #888;
+  width: 85%;
+  line-height: 30pt;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body >
+<div class=border>
+        <h1>Dog Days</h1>
+        <p>Live in the Dog Days Today!</p>
+        <p>
+        <img src="Dog Days Logo.PNG" width="406" height="301">
+        </p>
+    
+
+<!-- Trigger/Open The Modal -->
+<p>
+<button id="signupbtn">Sign-up</button>
+</p>
+<!-- The Modal -->
+<div id="signupModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h5>Sign up</h5>
+    <form id="Signup-form" action="main.html" method="post">
+      <div class="input">
+        <label for="signup-fname">First Name:</label>
+        <input type="text" id="signup-fname" required/>
+      </div>
+      <div class="input">
+        <label for="signup-surname">Last Name:</label>
+        <input type="text" id="signup-surname" required />
+      </div>
+      <div class="input">
+        <label for="signup-email">Email Address:</label>
+        <input type="email" id="signup-email" required />
+      </div>
+      <div class="input">
+        <label for="signup-password">Enter password:</label>
+        <input type="password" id="signup-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+        required/>
+        <script src= "Password-valid.js">
+        </script>
+      </div>
+      <div class="input">
+        <label for="signup-DOB">Enter Date of Birth:</label>
+        <input type="date" id="signup-DOB" required />
+      </div>
+      <div class="input">
+        <label for="signup-image">Select Image:</label>  
+        <input type="file" id="signup-image" accept="image/*" required />
+      </div>
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+    </form>
+  </div>
+</div>
+<p>
+<button id="loginbtn">Log-in</button>
+</p>
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h4>Login</h4><br />
+
+        <form id="Login-form" action="main.html" method="post">
+          <div class="input">
+            <label for="login-email">Email Address:</label>
+            <input type="email" id="login-email" required />
+            
+          </div>
+          <div class="input">
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
+          </div>
+          <div class="clearfix">
+              <button type="submit" class="loginbtn">Login</button>
+          </div>
+        </form>
+    </div>
+</div>
+</p>
+<script>
+// Get the modal
+var smodal = document.getElementById("signupModal");
+var lmodal = document.getElementById("loginModal");
+// Get the button that opens the modal
+var sbtn = document.getElementById("signupbtn");
+var lbtn = document.getElementById("loginbtn");
+// Get the <span> element that closes the modal
+var sspan = document.getElementsByClassName("close")[0];
+var lspan = document.getElementsByClassName("close")[1];
+// When the user clicks the button, open the modal 
+sbtn.onclick = function() {
+  smodal.style.display = "block";
+}
+lbtn.onclick = function() {
+  lmodal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+sspan.onclick = function() {
+  smodal.style.display = "none";
+}
+lspan.onclick = function() {
+  lmodal.style.display = "none";
+}
+
+</script>
+
+</div>
+</body>
+</html>
