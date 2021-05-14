@@ -1,12 +1,12 @@
 p { text-align: center;
-  line-height: .5;
+  line-height: .4;
 }
 h1 { text-align: center;
   font-size: 45px;
 }
 h4 { text-align: center;
   font-size: 35px;
-  line-height: .2;
+  line-height: .3;
 }
 body { background-color: rgba(132, 157, 241, 0.849);;
 }
@@ -19,6 +19,7 @@ h3{
   right: 0px;
   bottom: 0px;
 }
+
 button {
   background-color: white;
   border: 2px solid black;

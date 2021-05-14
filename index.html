@@ -4,11 +4,20 @@
 <head>
     <link rel="stylesheet" href="font.css">
     <link rel="stylesheet" href="Buttons.css">
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="Buttons.css">
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" /> 
     <title>Dog Days</title>
 </head>
-
+<script src= "Password-valid.js">
+</script>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -31,7 +40,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   background-color: #ece8e8;
   margin: auto;
   padding: 15px;
-  border: 2px solid #888;
+  border: 3px solid rgb(124, 124, 124);
   border-radius: 5px;
   width: 85%;
   line-height: 30pt;
@@ -63,12 +72,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
     
 
 <!-- Trigger/Open The Modal -->
-<p>
-<button id="signupbtn">Sign-up</button>
-</p>
+  <p>
+    <button id="signupbtn">Sign-up</button>
+  </p>
 <!-- The Modal -->
 <div id="signupModal" class="modal">
-
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -97,8 +105,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
         <label for="signup-password">Enter password:</label>
         <input type="password" id="signup-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
         required/>
-        <script src= "Password-valid.js">
-        </script>
          </p>
       </div>
       <div class="input">
@@ -116,6 +122,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
       <div class="clearfix">
         <p>
         <button type="submit" class="signupbtn">Sign-Up</button>
+        
         </p>
     </div>
     </form>
@@ -129,7 +136,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
         <span class="close">&times;</span>
         <h4>Log-in</h4>
       
-        <form id="Login-form" action="main.html" method="post">
+        <form id="Login-form"  method="post">
           
           <div class="input">
           <p>
@@ -141,17 +148,28 @@ body {font-family: Arial, Helvetica, sans-serif;}
           <div class="input">
             <p>
             <label for="login-password">Password:</label>
-            <input type="password" id="login-password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Enter your Password"required />
+            <input type="password" id="login-password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
             </p>
           </div>
           <div class="clearfix">
             <p>
               <button type="submit" class="loginbtn">Log-in</button>
             </p>
+
           </div>
         </form>
     </div>
 </div>
+</p>
+<p>
+  <a>
+    <button id="signoutbtn" type="button">Sign-out</button>
+  </a>
+</p>
+<p>
+     <a>   
+  <button type="button" onclick="location.href='main.html'">Home</button>
+</a>  
 </p>
 <script>
 // Get the modal
@@ -180,6 +198,7 @@ lspan.onclick = function() {
 }
 
 </script>
+
 </div>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-app.js"></script>
@@ -208,12 +227,13 @@ lspan.onclick = function() {
   firebase.analytics();
 //auth and firestore references 
   const auth = firebase.auth();
-  const db = firebase.firestore();
+  const database = firebase.firestore();
 
 //update database
-db.settings({ timestampsInSnapshots: true });
+database.settings({ timestampsInSnapshots: true });
 </script>
 <script type="text/javascript"  src="auth.js" charset="utf-8"></script>
 <script src = index.js></script>
+<script src = database.js></script>
 </body>
 </html>

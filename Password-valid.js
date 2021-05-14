@@ -6,6 +6,8 @@ var number = document.getElementById("number");
 var length = document.getElementById("length");
 
 // When the user starts to type something inside the password field
+
+
 myInput.onkeyup = function() {
   // Validate lowercase letters
   var lowerCaseLetters = /[a-z]/g;
